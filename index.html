@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="mapGame.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0OZh_Nj3QpfmKTWv9fxYyIXP4jmXBgLE&libraries=geometry"></script>
+  <script type="text/javascript" src="cities.js"></script>
+  <script type="text/javascript" src="mapGame.js"></script>
+</head>
+
+<body>
+<div id="header"> 
+  <div id="header-title">
+    <div id="normal-label-1" class="label"></div>
+    <div id="bold-label-1" class="bold-label label"></div>
+    <div id="normal-label-2" class="label"></div>
+    <div id="bold-label-2" class="bold-label label"></div>
+  </div>
+  <div class="buttons-container">
+    <div id="secondary-button" class="button" onclick="guess()">Make Guess</div>
+    <div id="primary-button" class="button" onclick="hintClick()"></div>
+  </div>
+</div>
+<div id="googleMap"></div>
+</body>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0OZh_Nj3QpfmKTWv9fxYyIXP4jmXBgLE&callback=initMap">
+    </script>
+  </body>
+</html> -->

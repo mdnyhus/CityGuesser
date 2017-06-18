@@ -1,0 +1,73 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+div#header {
+  height: 50px;
+  width: 100%;
+  
+  /* text-align: center; */
+  display: flex;
+}
+
+div#header #header-title {
+  margin: auto 0;
+  font-size: 15pt;
+  padding: 10px;
+  overflow: hidden;
+}
+
+div#header #header-title .label {
+  float: left;
+}
+
+div#header #header-title .bold-label {
+  font-weight: bold;
+}
+
+div#header .buttons-container {
+  position: absolute;
+  right: 0;
+  height: 50px; /* height of header */
+  display: flex;
+}
+
+div#header .buttons-container #secondary-button {
+  display: none;
+}
+
+.button {
+  /* This is REALLY lazy, shouldn't be constant like this */
+  border: 1px solid #0080d1;
+  background-color: white;
+  color: #0080d1;
+  padding: 9px 25px;
+  margin: auto;
+  margin-right: 6px; /* 6px = margin-top and margin-bottom with auto */
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0080d1;
+  border: 1px solid rgba(0,0,0,0);
+  color: white;
+}
+
+.button.inactive {
+  pointer-events: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.2)
+}
+
+div#googleMap {
+  height: calc(100% - 50px); /* height of header */
+  width: 100%;
+  cursor: crosshair;
+}
