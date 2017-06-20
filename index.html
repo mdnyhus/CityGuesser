@@ -15,6 +15,8 @@
     <div id="bold-label-1" class="bold-label label"></div>
     <div id="normal-label-2" class="label"></div>
     <div id="bold-label-2" class="bold-label label"></div>
+    <div id="normal-label-3" class="label"></div>
+    <div id="bold-label-3" class="bold-label label"></div>
   </div>
   <div class="buttons-container">
     <div id="secondary-button" class="button" onclick="guess()">Make Guess</div>
@@ -22,6 +24,22 @@
   </div>
 </div>
 <div id="googleMap"></div>
+<div id="popover">
+  <div id="popover-body" onclick="popoverBodyClick(event)">
+    <div class="text-container">
+      <div class="score-container">You scored <b id="popover-score-bold"></b></div>
+      <div class="score-details-container">
+        <div class="score-detail">Distance: <b id="popover-distance-bold"></b></div>
+        <div class="score-detail">Population: <b id="popover-pop-bold"></b></div>
+        <div class="score-detail">Hints used: <b id="popover-hints-bold"></b></div>
+      </div>
+    </div>
+    <div class="buttons-container">
+      <div id="close-button" class="button button-left" onclick="closePopover()">Close</div>
+      <div id="new-game-button" class="button button-right" onclick="hintClick()">New Question</div>
+    </div>
+  </div>
+</div>
 </body>
 
 <!-- <!DOCTYPE html>

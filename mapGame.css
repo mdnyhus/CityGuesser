@@ -7,6 +7,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  position: absolute; /* weird... */
 }
 
 div#header {
@@ -15,6 +16,11 @@ div#header {
   
   /* text-align: center; */
   display: flex;
+  
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
 }
 
 div#header #header-title {
@@ -67,7 +73,64 @@ div#header .buttons-container #secondary-button {
 }
 
 div#googleMap {
+  margin-top: 50px; /* height of header */
   height: calc(100% - 50px); /* height of header */
   width: 100%;
   cursor: crosshair;
+}
+
+div#popover {
+  position: absolute;
+  top: 50px; /* header height */
+  bottom: 0;
+  width: 100%;
+  /* background-color: rgba(0,0,0,0.35); */
+  display: flex;
+  
+  display: none;
+  
+  pointer-events: none;
+}
+
+div#popover div#popover-body {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  
+  pointer-events: auto;
+  
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+
+div#popover div#popover-body div.text-container {
+  padding: 0 100px;
+}
+
+div#popover div#popover-body div.text-container div.score-details-container {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+div#popover div#popover-body div.text-container div.score-details-container div.score-detail {
+  margin: 5px 0;
+}
+
+div#popover div#popover-body div.buttons-container {
+  display: flex;
+}
+
+div#popover div#popover-body div.buttons-container div.button {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 40%;
+}
+
+div#popover div#popover-body div.buttons-container div.button-left {
+  margin-left: 5%;
+}
+
+div#popover div#popover-body div.buttons-container div.button-right {
+  margin-left: 10%;
 }
